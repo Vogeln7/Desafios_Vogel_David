@@ -23,7 +23,9 @@ app.get('/productosRandom',async(req, res)=>{
     let randomId=(min,max)=>{
         return Math.random()*(max-min)+min;
     }
-    let idRandom=parseInt(randomId(0,products.productList.length-1))    
+    let maxLength= products.productList.length+1;
+    let idRandom=parseInt(randomId(1,maxLength));
+    console.log(idRandom);    
     res.send(await products.getByID(idRandom));
 })
 
