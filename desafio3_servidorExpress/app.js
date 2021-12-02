@@ -13,8 +13,8 @@ products.init()
 
 
 app.get('/productos', async(req, res)=>{
-    
-    res.send(await products.getAll())
+    let respuesta = JSON.parse(await products.getAll())
+    res.send(respuesta)
     
 })
 
