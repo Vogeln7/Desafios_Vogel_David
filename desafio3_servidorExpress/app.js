@@ -8,9 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const products= new ProductContainer('products.json');
-products.init()
-
-;
+products.init();
 
 app.get('/productos', async(req, res)=>{
     
