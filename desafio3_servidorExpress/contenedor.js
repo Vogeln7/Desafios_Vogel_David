@@ -10,10 +10,8 @@ class ProductContainer {
 
     async getAll() {         
         try {           
-            let allProducts = JSON.stringify(this.productList);
-            console.log('se ejecutó get all ');
-             return allProducts           
-
+            let allProducts = JSON.stringify(this.productList);            
+             return allProducts
         } catch (error) {
             console.log(`Error: ${error}`);
         }
